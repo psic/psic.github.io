@@ -1,6 +1,7 @@
 ---
 layout: article
 title: enfin mon journal de bord de développeur! 
+comments: true
 ---
 
 # Enfin, un blog!

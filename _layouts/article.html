@@ -41,6 +41,10 @@ type: article
       {%- include article-footer/author-profile.html -%}
     {%- endif -%}
 
+	{% if page.comments == true %}
+	{% include disqus.html %}
+	{% endif %}
+	
     {%- if page.license -%}
       <div class="article__license">{%- include article-footer/license.html -%}</div>
     {%- endif -%}
