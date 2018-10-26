@@ -30,6 +30,11 @@ type: article
     {%- elsif page.date -%}
       <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
     {%- endif -%}
+    
+    {% if page.comments == true %}
+		<script id="dsq-count-scr" data-cfasync="false" src="//psic.disqus.com/count.js" async></script>
+	{% endif %}
+    
     {%- include article-footer/custom.html -%}
 
     {%- if _show_author_profile -%}
