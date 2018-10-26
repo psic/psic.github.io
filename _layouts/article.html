@@ -30,7 +30,6 @@ type: article
     {%- elsif page.date -%}
       <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
     {%- endif -%}
-	<p>{% if page.comments == true %} | <a href="{{ site.url }}{{ page.url }}#disqus_thread" class="disqus-comment-count">Comments</a>{% endif %}</p>
     
     {%- include article-footer/custom.html -%}
 

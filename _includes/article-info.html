@@ -70,6 +70,9 @@
         </li>
       {%- endif -%}
 
+		{% if page.comments == true %} <p> <a href="{{ site.url }}{{ page.url }}#disqus_thread" class="disqus-comment-count">Comments</a> </p>{% endif %}
+
+
       {%- if _pageview or post -%}
         {%- if site.pageview.provider -%}
 
