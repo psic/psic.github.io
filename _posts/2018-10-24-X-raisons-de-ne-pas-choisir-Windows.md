@@ -1,6 +1,7 @@
 ---
 layout: article
 title: X raisons de ne pas choisir ni Windows ni Mac.
+published: false
 ---
 
 # Enfin, un blog!
