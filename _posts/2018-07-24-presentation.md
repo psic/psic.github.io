@@ -20,4 +20,7 @@ C'est vrai ça, de quoi qu'on cause ? Je pense que ce sera des trucs de geek : d
 
 Pour commencer, une liste de liens internes qui me serviront autant à vous qu'à moi de pense-bête, et à comme une espèce de présentation
 
-
++ [Mes outils, mes configs, mon GNU/Linux]({{ site.baseurl }}{% post_url 2018-11-10-outils %}) -
++ [Des blogs et autres ressources que j'aime bien]({{ site.baseurl }}{% post_url 2018-11-05-ressourceweb %}) 
++ [Quelques livres tout aussi utiles, mais y'en a pas beaucoup]({{ site.baseurl }}{% post_url 2018-11-05-ressource-livre %})
++ [Des BDs de codeurs]({{ site.baseurl }}{% post_url 2018-11-05-ressource-comics %})
