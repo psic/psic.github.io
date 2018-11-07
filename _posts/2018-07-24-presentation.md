@@ -24,8 +24,3 @@ Pour commencer, une liste de liens internes qui me serviront autant Ã  vous qu'Ã
 * tzr
 *  sdgsfdg 
 * erar aze
-
-[Mes outils, mes configs, mon GNU/Linux]({{ site.baseurl }}{% post_url 2018-11-10-outils %}) -
-[Des blogs et autres ressources que j'aime bien]({{ site.baseurl }}{% post_url 2018-11-05-ressourceweb %}) 
-[Quelques livres tout aussi utiles, mais y'en a pas beaucoup]({{ site.baseurl }}{% post_url 2018-11-05-ressource-livre %})
-[Des BDs de codeurs]({{ site.baseurl }}{% post_url 2018-11-05-ressource-comics %})
