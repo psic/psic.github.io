@@ -20,7 +20,7 @@ C'est vrai ça, de quoi qu'on cause ? Je pense que ce sera des trucs de geek : d
 
 Pour commencer, une liste de liens internes qui me serviront autant à vous qu'à moi de pense-bête, et à comme une espèce de présentation
 
-* trzt
+* [Mes outils, mes configs, mon GNU/Linux]({{ site.baseurl }}{% post_url 2018-11-10-outils %})
 * tzr
 *  sdgsfdg 
 * erar aze
