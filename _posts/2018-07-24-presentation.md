@@ -9,7 +9,7 @@ Depuis le temps que je me dis qu'il faut que je le fasse, que je partage 2, 3 tr
 
 # La plateforme
 
-Ce qui m'a toujours réfréné quand j'ai eu envie de faire un blog, ce sont les plateformes. Au tout début, WordPress existait déjà, on pouvait l'héberger sur son petit serveur à la maison, oui mais pour "avoir" un blog, il fallait déjà se trimballer une base de données toute biscornue et une interface d'admin pas possible. J'ai été tenté et essayé d'autres plateformes et BING, même constat ou presque. Ce que je voulais c'était pouvoir écrire un article dans un fichier, quelque part dans mon PC, et le mettre "à publier" quand je le pensait fini. Des fichiers me semblaient suffisants. Et même si on pouvait envisager d'avoir des commentaires sur un article, des fichiers me semblaient suffisants pour gérer tout ça. Pas envie de se trimbaler une base de données obscures. Un truc [KISS]({{ site.baseurl }}{% post_url 2018-11-05-KISS %}). Et maintenant, c'est à la mode, ça revient en force! Et grâce à github, on peut avoir un blog (qui n'est donc pas hébergé à la maison) en utilisant [jekyll](https://jekyllrb.com) un framework avec que des fichiers. BANCO! Je fais un blog. En plus, on écrit en [markdown]() qui est un autre truc [KISS]({{ site.baseurl }}{% post_url 2018-11-05-KISS %}), un langage à balisage léger. J'en reparlerai sûrement un autre jour, mais le markdown, c'est trop chouette. On écrit simplement, sans fioriture...et ça nous fait du joli pdf via Latex, du html, ou juste du texte structuré, "human readable".
+Ce qui m'a toujours réfréné quand j'ai eu envie de faire un blog, ce sont les plateformes. Au tout début, WordPress existait déjà, on pouvait l'héberger sur son petit serveur à la maison, oui mais pour "avoir" un blog, il fallait déjà se trimballer une base de données toute biscornue et une interface d'admin pas possible. J'ai été tenté et essayé d'autres plateformes et BING, même constat ou presque. Ce que je voulais c'était pouvoir écrire un article dans un fichier, quelque part dans mon PC, et le mettre "à publier" quand je le pensait fini. Des fichiers me semblaient suffisants. Et même si on pouvait envisager d'avoir des commentaires sur un article, des fichiers me semblaient suffisants pour gérer tout ça. Pas envie de se trimbaler une base de données obscures. Un truc [KISS]({{ site.baseurl }}{% post_url 2018-11-05-KISS %}). Et maintenant, c'est à la mode, ça revient en force! Et grâce à github, on peut avoir un blog (qui n'est donc pas hébergé à la maison) en utilisant [jekyll](https://jekyllrb.com) un framework avec que des fichiers. BANCO! Je fais un blog. En plus, on écrit en [markdown](http://www.google.com) qui est un autre truc [KISS]({{ site.baseurl }}{% post_url 2018-11-05-KISS %}), un langage à balisage léger. J'en reparlerai sûrement un autre jour, mais le markdown, c'est trop chouette. On écrit simplement, sans fioriture...et ça nous fait du joli pdf via Latex, du html, ou juste du texte structuré, "human readable".
 Et puis il y a eu toute les fois, où en plus des plateformes, je n'avais rien à dire de spécial, rien à partager, et donc pas de contenu.
 
 # Le contenu ?
@@ -20,11 +20,4 @@ C'est vrai ça, de quoi qu'on cause ? Je pense que ce sera des trucs de geek : d
 
 Pour commencer, une liste de liens internes qui me serviront autant à vous qu'à moi de pense-bête, et à comme une espèce de présentation
 
-+ Un
-+ dex
-+ 2
-+ kat
-<!---+ [Mes outils, mes configs, mon GNU/Linux]({{ site.baseurl }}{% post_url 2018-11-10-outils %}) -
-+ [Des blogs et autres ressources que j'aime bien]({{ site.baseurl }}{% post_url 2018-11-05-ressourceweb %}) 
-+ [Quelques livres tout aussi utiles, mais y'en a pas beaucoup]({{ site.baseurl }}{% post_url 2018-11-05-ressource-livre %})
-+ [Des BDs de codeurs]({{ site.baseurl }}{% post_url 2018-11-05-ressource-comics %}) -->
+
