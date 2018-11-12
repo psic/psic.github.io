@@ -2,6 +2,7 @@
 layout: article
 title: enfin mon journal de bord de développeur! 
 comments: true
+category: presentation
 ---
 
 

@@ -7,7 +7,7 @@ J'étais un utilisateur très satisfait de claws-mail [liens] (ou sylpheed) tant
 
 # Alpine & Mutt
 
-J'ai d'abord essayé des logiciels de référence dans ce domaine, a savoir Alpine [liens] & Mutt [liens]. Effectivement, ces logiciels sont bien pensés et font tout ce que l'on peu attendre d'un lecteur de mail. La configuration peut paraître un peu fastidieuse, mais bon quand c'est faut, c'est fait. Ma préférence entre les deux va à Mutt. Mais que ce soit pour l'un ou pour l'autre, la configuration d'une boîte mail unifié est très (trop) complexe et je n'ai pas réussi à me faire un Mutt aux petits ognions 
+Dans un premier temps, j'ai essayé des logiciels de référence dans ce domaine, à savoir Alpine [liens] & Mutt [liens]. Effectivement, ces logiciels sont bien pensés et font tout ce que l'on peu attendre d'un lecteur de mail. La configuration peut paraître un peu fastidieuse, mais bon quand c'est fait, c'est fait. Ma préférence entre les deux va à Mutt. Mais que ce soit pour l'un ou pour l'autre, la configuration d'une boîte mail unifiée est très (trop) complexe et je n'ai pas réussi à me faire un Mutt aux petits ognions.
 
 #  Notmuch & Alot 
 
