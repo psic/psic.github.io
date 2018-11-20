@@ -5,6 +5,6 @@ category: ressource
 
 ---
 
-+ Coding Horror
-+ suckless
++ [Coding Horror](https://blog.codinghorror.com/)
++ [suckless](https://suckless.org/)
 

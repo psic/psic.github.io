@@ -14,6 +14,9 @@ category: ressource
 
 ![Couverture Logicomix(https://images-na.ssl-images-amazon.com/images/I/51ucBCtY6qL._SX364_BO1,204,203,200_.jpg "couverture")
 
++ #Cyberbook. L'admirable saga de l'informatique et de la culture numérique
+![cyberbook](https://bdmetrique.files.wordpress.com/2016/02/cyberbook.png?w=529 "couverture")
+
 + [Commit Strip](https://www.commitstrip.com/fr/)
 + [Monkey User](https://www.monkeyuser.com/)
 ![Test Driven Development](https://www.monkeyuser.com/assets/images/2018/107-applied-tdd.png "TDD")
