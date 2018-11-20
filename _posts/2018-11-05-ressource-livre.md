@@ -6,6 +6,7 @@ category: ressource
 ---
 
 + The pragmatic programmer. From journeyman to master
+
 De Wikipédia
 >The book does not present a systematic theory, but rather a collection of tips to improve the development process in a pragmatic way. The main qualities of what the authors refer to as a pragmatic programmer are being an early adopter, to have fast adaptation, inquisitiveness and critical thinking, realism, and being a jack-of-all-trades
 
