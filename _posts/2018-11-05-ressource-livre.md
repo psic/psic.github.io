@@ -12,5 +12,6 @@ De Wikipédia
 ![pragmatic cover](https://upload.wikimedia.org/wikipedia/en/8/8f/The_pragmatic_programmer.jpg "couverture")
 
 + The mythical man-month
+
 ![mythical cover](https://images-na.ssl-images-amazon.com/images/I/51WIpM70FEL._SX334_BO1,204,203,200_.jpg "couverture")
 
