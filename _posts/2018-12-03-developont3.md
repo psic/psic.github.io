@@ -2,6 +2,7 @@
 layout: article
 title: Develo'Pont des financements pour notre promo II
 category: formation, formateur
+comments: true
 ---
 
 ([Publié avec quelques modification le 3 octobre 2018 sur Linkedin](https://www.linkedin.com/pulse/developont-des-financements-pour-notre-promo-ii-j%C3%A9r%C3%B4me-pierson/))

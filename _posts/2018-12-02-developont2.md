@@ -2,6 +2,7 @@
 layout: article
 title: Fabrique de codeurs Made In Vercors de 13/20 à 90% de réussite.
 category: formation, formateur
+comments: true
 ---
 
 (Publié sur LinkedIn, puis retiré!)
