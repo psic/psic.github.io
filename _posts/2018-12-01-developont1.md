@@ -12,6 +12,6 @@ Le cursus de développement web, proposé à Dévelo'Pont, permettra aux apprena
 
 Cette formation ne prend tout son sens que si elle est soutenue par des entreprises. Nous sommes en recherche de partenaires et de soutien. Une simple lettre de soutien est déjà une aide concrète pour nous, mais si votre entreprise ou une connaissance a des besoins de compétences numériques, elle peut, dès aujourd'hui, nous contacter, et pourquoi pas s'engager dans une "promesse" d'embauche pour un de nos apprenants. Un apprenant bien formé est un apprenant formé sur mesure en fonction des besoins de son employeur.
 
-![developont flyer recto]{https://media.licdn.com/dms/image/C5112AQECVCmOC9aqDA/article-inline_image-shrink_1500_2232/0?e=1548288000&v=beta&t=RQmIlZ1Nu3dCMcKDVek0U9JcXQdnL_PpsIc1xYLnqLs}
+![developont flyer recto]{https://media.licdn.com/dms/image/C5112AQECVCmOC9aqDA/article-inline_image-shrink_1500_2232/0?e=1548288000&v=beta&t=RQmIlZ1Nu3dCMcKDVek0U9JcXQdnL_PpsIc1xYLnqLs "recto"}
 
-![developont flyer verso]{https://media.licdn.com/dms/image/C5112AQFu1TdXlIdlhg/article-inline_image-shrink_1500_2232/0?e=1548288000&v=beta&t=1Fenwf7Ry54dtXmgBKXC5qhesdRIfIWn6EADKTrhygk}
+![developont flyer verso]{https://media.licdn.com/dms/image/C5112AQFu1TdXlIdlhg/article-inline_image-shrink_1500_2232/0?e=1548288000&v=beta&t=1Fenwf7Ry54dtXmgBKXC5qhesdRIfIWn6EADKTrhygk "verso"}

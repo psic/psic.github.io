@@ -4,7 +4,7 @@ title: Develo'Pont des financements pour notre promo II
 category: formation, formateur
 ---
 
-([Publié avec quelques modification le 3 octobre 2018 sur Linkedin](https://www.linkedin.com/pulse/developont-des-financements-pour-notre-promo-ii-j%C3%A9r%C3%B4me-pierson/)
+([Publié avec quelques modification le 3 octobre 2018 sur Linkedin](https://www.linkedin.com/pulse/developont-des-financements-pour-notre-promo-ii-j%C3%A9r%C3%B4me-pierson/))
 
 Le monde de la formation et de leur financement est un monde complexe, subtil et qui peut apparaître cruel ([voir le résumé de notre première promo]({{ site.baseurl }}{% post_url 2018-12-02-developont2 %})) Nous avons payé le prix fort pour notre naïveté, faute de financement nous n'avons pas réussi à enchaîner sur une deuxième promo de développeur web. Certes nos résultats ne sont pas excellent sur le plan comptable, mais sur le plan humain, nous sommes certain d'avoir réaliser de belles choses. Aujourd'hui 13 de nos 20 apprenants ont retrouvé le chemin de l'emploi et 2 se sont lancés dans l'entrepreunariat. Nous avons continué et nous continuons encore, pour ceux qui en ont besoin, leur accompagnement. Nous avons également mis en place une session de formation de « niveau 2 » pour une poignée de nos apprenants dans le but de les guider vers l'obtention du diplôme de développeur logiciel. La session d'examen aura lieu en Novembre. Une formation courte sur WordPress est également dans les tuyaux.
 
