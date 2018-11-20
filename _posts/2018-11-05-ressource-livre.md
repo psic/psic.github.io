@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Des livres
-category: ressources
+category: ressource
 
 ---
 
