@@ -17,6 +17,7 @@ Et puis il y a eu toute les fois, où en plus des plateformes, je n'avais rien �
 # Le contenu ?
 
 C'est vrai ça, de quoi qu'on cause ? Je pense que ce sera des trucs de geek : du linux (avec tout plein de fichier de config de logiciel bizarre), des machins en CLI (avec tout plein de fichiers de config de logiciels bizarres), de l'informatique et mes expériences de dev. Bref principalement de ce genre de trucs...et si ça se passe bien, je déborderais sûrement un peu (foot, bd, musique, et peut être tout un tas de truc tant que je trouve que ce que j'ai à dire est pertinent), on verra, rien de très précis.
+Il se pourrait que je partage 2,3 petites choses de temps en temps, des bouts de scripts, des templates Latex, des trucs que j'ai fait, sans trop d'explication, mais qui pourrait servir à qui voudrait faire la même chose ou presque. Il se peut que parfois cet espace me serve à vider mon cerveau d'idées plus ou moins stupides qui me trottent dans la tête. Il se pourrait que tout cela manque de cohérence à la fin!
 
 # Des liens
 

@@ -4,33 +4,8 @@ title: X raisons de ne pas choisir ni Windows ni Mac.
 published: false
 ---
 
-# Enfin, un blog!
+# Du point de vue professionnel
 
- Depuis le temps que ...
+Professionnellement, j'aurais du mal à travailler dans un environnement Windows tout simplement parce qu'il n'y a pas les outils tel que : *grep*,*find*,*cat*,*more*, et plein d'autres trucs livré directement avec tout les linux du monde qui permettent de faire bien des choses, nous sauvent la mise parfois et nous font gagner pas mal de temps.
 
-dqlkj slfj sdjk dsfmlk 
-
-## un sous-titre
-
-Oh du texte.... *engras* fqlk emlk eomlfsk _italik_
-fqsùml emo mqkf per dsf mlq dsfmlk
-
-## Encore un sous titre
-
-fds moazer ldfs poer mldfi m 
- mdslf alr pdof maezk pf dmlrko aper fq sdmlk pef
-
-
-# 2ème article!!!
-
-fmlk qklj qsfmlkj qmflkj 
-
-## titre
-
-fqsdf 
-sdf ml ù
- qdsfùlk qf
-
-##  azepo 
-
-fdsq mlsfk
+# Du point de vue grand public
