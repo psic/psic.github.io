@@ -15,9 +15,30 @@ category: ressource
 ![Couverture Logicomix](https://images-na.ssl-images-amazon.com/images/I/51ucBCtY6qL._SX364_BO1,204,203,200_.jpg "couverture")
 
 + #Cyberbook. L'admirable saga de l'informatique et de la culture numérique
+
 ![cyberbook](https://bdmetrique.files.wordpress.com/2016/02/cyberbook.png?w=529 "couverture")
 
 + [Commit Strip](https://www.commitstrip.com/fr/)
 + [Monkey User](https://www.monkeyuser.com/)
+
 ![Test Driven Development](https://www.monkeyuser.com/assets/images/2018/107-applied-tdd.png "TDD")
+
 + [xkcd](https://xkcd.com/)
+
+![sudo](http://www.bitrebels.com/wp-content/uploads/2010/02/sandwich.png "sudo")
+
+![compiling](https://imgs.xkcd.com/comics/compiling.png "compiling")
+
+![atheists](https://imgs.xkcd.com/comics/atheists.png "atheist")
+
+![password](https://imgs.xkcd.com/comics/password_strength.png "password")
+
+![duty](https://imgs.xkcd.com/comics/duty_calls.png "duty")
+
+![pointer](https://imgs.xkcd.com/comics/pointers.png "pointer")
+
+![tech](https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png "tech")
+
+![binary](https://imgs.xkcd.com/comics/1_to_10.png "binary")
+
+
