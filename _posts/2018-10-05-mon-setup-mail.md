@@ -2,6 +2,7 @@
 layout: article
 title: Une boîte mail unifiée en CLI
 category: CLI
+mermaid: true
 ---
 
 J'étais un utilisateur très satisfait de claws-mail [liens] (ou sylpheed) tant que je n'avais qu'une seule boîte mail. La multiplication et diversification de mes activités professionnelles et associatives ainsi que la quasi-obligation d'avoir un compte chez gmail pour accéder à certains services font que je me retrouve (selon les saison) avec un minimum de trois boîtes mails actives. Inutile de préciser que l'utilisation de webmail n'est pour moi qu'une solution de secours d'autant qu'il est plus pratique d'avoir un outils dédier aux mails, et non pas un ou plusieurs onglets perdu quelques part dans la forêt d'onglets qu'est mon navigateur. Mais surtout, ce que je voulais, c'est un lecteur de mail qui me propose une vue unifiée de l'ensemble de mes boîtes mails (en IMAP). Voir en un coup d'oeil l'ensemble des mails de mes boîtes de réception et pouvoir y répondre ou agir sur un mail en cliquant un minimum (avec une synchronisation totale de ce qui est fait en local et de ce qu'il y a sur le serveur). Je n'ai pas trouvé de lecteurs de mails graphiques ni réussi à configurer mon lecteur préféré (claws-mail) afin d'obtenir ce résultat. Je me suis alors tourné vers des solutions en mode console, d'autant plus que je recherche de plus en plus ce type de solutions, surtout quand elles sont bien pensées.
@@ -16,7 +17,19 @@ Dans un premier temps, j'ai essayé des logiciels de référence dans ce domaine
 
 +--------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-------------------------+                               
 | Mails entrants  |  -->  |  NotMuch INBOX Tag  |  -->  | Requête sur INBOX Tag  | -->  | Boîte mail unifiée  |                                                
-+--------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-------------------------+                               
++--------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-------------------------+       
+
+
+```mermaid
+graph LR;
+    A[Mails entrants]
+    B[NotMuch INBOX Tag]
+    C[Requête sur INBOX Tag]
+    D[Boîte mail unifiée]
+    A-->B;
+    B-->C;
+    C-->D;
+
 
 Il ne reste plus qu'un logiciel front-end pour afficher les mails et les gérer en utilisant les tags de notMuch. Mutt le fait, mais c'est encore une fois compliqué à configurer. Le logiciel [aLot](http://alot.readthedocs.io/) par contre fait cela très bien, mais alors vraiment bien de façons simple et élégante.
 
