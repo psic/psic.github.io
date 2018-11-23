@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Une boîte mail unifiée en CLI &#58; isync, notmuch, alot et msmtp
+title: Une boîte mail unifiée en CLI
 category:CLI
 ---
 
