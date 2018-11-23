@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Tips: ne pas trop galérer à écrire un rapport ou mémoire
+title: Tips. ne pas trop galérer à écrire un rapport ou mémoire
 published: false
 catégory: formation
 ---
