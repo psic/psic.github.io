@@ -37,7 +37,7 @@ La config de NotMuch se fait en 2 parties : la confiuration générale qui est a
 
 La partie spam ne marche pas pour l'instant. C'est une config simple qui me permet d'avoir une INBOX unifiée et une INBOX par adresse mail également. NotMuch peut vous permettre également de tagger et donc de retrouver simplement les mails de mailing list ou d'un expéditeur particulier.
 
-`
+~~~~
 #!/bin/bash
 export NOTSPAM_CLASSIFIER=spamassassin
 export NOTSPAM_LOG=/home/XXXXX/script/notspam/spamlog-classify.log
@@ -76,11 +76,11 @@ notmuch tag +archive -inbox -- date:..60d and tag:gmail
 notmuch tag +archive -inbox -- date:..300d and tag:dvlp
 
 echo "post-new complete; goodbye"
-`
+~~~~
 
 ### Config générale
 
-`
+~~~~
 [database]
 path=/home/.../.notmuch/mail/
 
@@ -101,12 +101,101 @@ synchronize_flags=true
 
 [crypto]
 gpg_path=gpg
-`
+~~~~
 
 
 ##  Alot -- config
 
-GGGGGGg
+~~~~
+theme=solarized_dark
+editor_cmd="vim +4 -u ~/.vimrc_forMutt +startinsert"
+[accounts]
+    [[free]]
+        realname =XXXXX
+        address = XXXXX@free.fr
+        sendmail_command = /usr/bin/msmtp -a free -t
+        sent_box = maildir:///home/XXXXX/Mail/.notmuch/mail/free/Sent
+        draft_box = maildir:///home/XXXXX/Mail/.notmuch/mail/free/Drafts
+        [[[abook]]]
+        type = abook
+
+    [[dvp]]
+        realname = XXXXX
+        address = XXXXX@developont.fr
+        sendmail_command = /usr/bin/msmtp -a developont -t
+		sent_box = maildir:///home/XXXXX/Mail/.notmuch/mail/developont/Sent
+        draft_box = maildir:///home/XXXXX/Mail/.notmuch/mail/developont/Drafts
+        [[[abook]]]
+        type = abook
+
+	[[gmail]]
+        realname = XXXXX
+        address = XXXXX@gmail.com
+        sendmail_command = /usr/bin/msmtp -a gmail -t
+		sent_box = maildir:///home/XXXXX/Mail/.notmuch/mail/gmail/Sent
+        draft_box = maildir:///home/XXXXX/Mail/.notmuch/mail/gmail/Drafts
+        [[[abook]]]
+        type = abook
+
+[bindings]
+	[[search]]
+		s = toggletags spam;move down
+		h = toggletags ham;move down
+		r = toggletags deleted;move down
+		f1 = search tag:inbox AND NOT tag:killed AND tag:free
+		f2 = search tag:inbox AND NOT tag:killed AND tag:gmail
+		f3 = search tag:inbox AND NOT tag:killed AND tag:dvlp
+		f4 = search tag:inbox AND NOT tag:killed AND tag:spam AND tab:free
+		f5 = search tag:inbox AND NOT tag:killed AND tag:spam AND tag:deleted AND tag:free
+		f6 = search tag:inbox AND NOT tag:killed AND tag:deleted AND tag:free
+
+[tags]
+
+  [[flagged]]
+    translated = ⚑
+    normal = '','','light red','','light red',''
+    focus = '','','light red','','light red',''
+
+  [[unread]]
+#    translated = ✉
+	   translated = ''
+	
+  [[replied]]
+    #translated = ⏎⮠↩
+	translated = ↩
+	normal = '','','dark green,bold','','white, bold',''
+	[[sent]]
+	translated = ↗
+	normal = '','','dark green,bold','','white, bold',''
+  [[encrypted]]
+    translated = ⚷
+  
+  [[spam]]
+   translated = ☣
+    normal = '','','dark green','','dark green',''
+    focus = '','','dark green','','dark green',''
+    
+  [[attachment]]
+   translated = 📎
+   
+  [[inbox]]
+  translated = ''
+  
+   [[free]]
+  translated = ''
+  
+   [[dvlp]]
+  translated = ''
+  
+   [[gmail]]
+  translated = ''
+  
+     [[signed]]
+  translated = ''
+~~~~
+
+## Alot -- theme
+
 
 
 # Isync & Msmtp
