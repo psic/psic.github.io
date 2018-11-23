@@ -14,11 +14,10 @@ Dans un premier temps, j'ai essayé des logiciels de référence dans ce domaine
 
 [NotMuch](https://notmuchmail.org/) est un logiciel qui ne fait qu'une toute petite chose : il tag vos mails. Il enregistre où sont ranger vos fichiers mails, les indexe et leur appose un tag en fonction de règle que vous écrivez. Le logiciel [a few](https://afew.readthedocs.io/en/latest/) permet d'écrire ces règles de façons un peu plus simple que ne le permet notMuch, mais le principe reste le même. Il possède un puissant moteur de recherche qui vous permet de faire des recherche en utilisant ces tag, mais également les dates des mails ou d'autres attributs. Si vous recevez des mails de plusieurs adresses, que vous taggez tout ces mails entrants avec notMuch sur par exemple un tag INBOX (vous en plus leurs donner un tag par adresse mail), puis que vous faîtes une requête à notMuch sur le tag INBOX, vous avez **Une boîte mail unifiée** !! Youpi!
 
- ________________          _____________________         ________________________        _____________________
-|                 |       |                     |       |                        |      |                     |
-| Mails entrants  |  -->  |  NotMuch INBOX Tag  |  -->  | Requête sur INBOX Tag  | -->  | Boîte mail unifiée  |
-|_________________|       |_____________________|       |________________________|      |_____________________|
- 
++--------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-------------------------+                               
+| Mails entrants  |  -->  |  NotMuch INBOX Tag  |  -->  | Requête sur INBOX Tag  | -->  | Boîte mail unifiée  |                                                
++--------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-------------------------+                               
+
 Il ne reste plus qu'un logiciel front-end pour afficher les mails et les gérer en utilisant les tags de notMuch. Mutt le fait, mais c'est encore une fois compliqué à configurer. Le logiciel [aLot](http://alot.readthedocs.io/) par contre fait cela très bien, mais alors vraiment bien de façons simple et élégante.
 
 ## NotMuch -- config
@@ -32,10 +31,9 @@ GGGGGGg
 
 # Isync & Msmtp
 
- ________________          _____________________         ________________________        _____________________
-|                 |       |                     |       |                        |      |                     |
-| Mails entrants  |  -->  |  NotMuch INBOX Tag  |  -->  | Requête sur INBOX Tag  | -->  | Boîte mail unifiée  |
-|_________________|       |_____________________|       |________________________|      |_____________________|
++--------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-------------------------+                               
+| Mails entrants  |  -->  |  NotMuch INBOX Tag  |  -->  | Requête sur INBOX Tag  | -->  | Boîte mail unifiée  |                                                
++--------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------------------------------------+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-------------------------+
 
 ## Isync -- config
 
