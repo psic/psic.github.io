@@ -31,6 +31,9 @@ graph LR;
 
 Il ne reste plus qu'un logiciel front-end pour afficher les mails et les gérer en utilisant les tags de notMuch. Mutt le fait, mais c'est encore une fois compliqué à configurer. Le logiciel [aLot](http://alot.readthedocs.io/) par contre fait cela très bien, mais alors vraiment bien de façons simple et élégante.
 
+![alot  screenshot](/assets/alot.png)
+
+
 ## NotMuch -- config
 
 La config de NotMuch se fait en 2 parties : la configuration générale qui est assez basique, et un hook qui permet de tagger les nouveaux mails
