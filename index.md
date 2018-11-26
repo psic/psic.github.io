@@ -1,3 +1,10 @@
+---
+layout: home
+articles:
+  excerpt_type: html
+---
+
+
 Here's a sample "posts list".
 
 <ul class="posts">
