@@ -4,6 +4,8 @@ title: Un deevklog ? WTF ?
 comments: true
 category: presentation
 tags: presentation
+show_excerpt: true
+excerpt_type: html
 ---
 
 *Deevklog* : contraction de dev (pour developpeur), de geek et de log. Donc c'est un peu des 3, et je suis l'auteur de ce néologisme. (Pas peu fière le gars!)
