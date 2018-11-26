@@ -5,7 +5,7 @@ articles:
 ---
 
 
-Ici c'est Papa-riz ri
+Ici c'est Papa-riz riZZZ
 
 <ul class="posts">
   {% for post in site.posts %}
