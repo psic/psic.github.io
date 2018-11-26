@@ -14,3 +14,6 @@ header:
   - titles:
       en:       Home
     url:        /home.html
+  - titles:
+      en:       Homme
+    url:        /homme.html
