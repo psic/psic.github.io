@@ -1,8 +1,9 @@
 ---
 layout: article
 title: Une fabrique sociale de codeurs en milieu rurale
-category: formation, formateur
+category: formation formateur
 comments: true
+tags: formation formateur
 ---
 
 ([Publié le 16 mars 2017 sur Linkedin](https://www.linkedin.com/pulse/une-fabrique-sociale-de-codeurs-en-milieu-rurale-j%C3%A9r%C3%B4me-pierson/))

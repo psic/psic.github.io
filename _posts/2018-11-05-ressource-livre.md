@@ -2,7 +2,7 @@
 layout: article
 title: Des livres
 category: ressource
-
+tags: ressource
 ---
 
 + The pragmatic programmer. From journeyman to master

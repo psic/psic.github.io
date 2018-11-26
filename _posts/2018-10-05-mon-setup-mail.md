@@ -3,6 +3,8 @@ layout: article
 title: Une boîte mail unifiée en CLI
 category: CLI
 mermaid: true
+comments: true
+tags: CLI
 ---
 
 J'étais un utilisateur très satisfait de claws-mail [liens] (ou sylpheed) tant que je n'avais qu'une seule boîte mail. La multiplication et diversification de mes activités professionnelles et associatives ainsi que la quasi-obligation d'avoir un compte chez gmail pour accéder à certains services font que je me retrouve (selon les saison) avec un minimum de trois boîtes mails actives. Inutile de préciser que l'utilisation de webmail n'est pour moi qu'une solution de secours d'autant qu'il est plus pratique d'avoir un outils dédier aux mails, et non pas un ou plusieurs onglets perdu quelques part dans la forêt d'onglets qu'est mon navigateur. Mais surtout, ce que je voulais, c'est un lecteur de mail qui me propose une vue unifiée de l'ensemble de mes boîtes mails (en IMAP). Voir en un coup d'oeil l'ensemble des mails de mes boîtes de réception et pouvoir y répondre ou agir sur un mail en cliquant un minimum (avec une synchronisation totale de ce qui est fait en local et de ce qu'il y a sur le serveur). Je n'ai pas trouvé de lecteurs de mails graphiques ni réussi à configurer mon lecteur préféré (claws-mail) afin d'obtenir ce résultat. Je me suis alors tourné vers des solutions en mode console, d'autant plus que je recherche de plus en plus ce type de solutions, surtout quand elles sont bien pensées.
@@ -31,10 +33,39 @@ Il ne reste plus qu'un logiciel front-end pour afficher les mails et les gérer 
 
 ## NotMuch -- config
 
-La config de NotMuch se fait en 2 parties : la confiuration générale qui est assez basique, et un hook qui permet de tagger les nouveaux mails
+La config de NotMuch se fait en 2 parties : la configuration générale qui est assez basique, et un hook qui permet de tagger les nouveaux mails
+
+### Config générale
+
+Dans la config générale de notMuch, on configure l'endroit où sera stocké la base de données de mails, ses informations personnelles : son nom et ses différentes adresses mails, les tags à ignorer pour les recherche (ici, les mails portant les tags *deleted* et *spam* seront ignorés) et enfin le ou les tags que porteront les mails entrants (ici, *new*).
+
+~~~~
+[database]
+path=/home/.../.notmuch/mail/
+
+[user]
+name=MyName
+primary_email=xxxx@developont.fr
+other_email=xxxxx@gmail.com;xxx@free.fr;
+
+[new]
+tags=new;
+ignore=
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
+synchronize_flags=true
+
+[crypto]
+gpg_path=gpg
+~~~~
+
 
 ### post-new Hook
 
+La logique est la suivante : les mails arrivent avec un tag *new*. En fonction de leur expéditeurs et/ou destinataire, on enlève ce tag pour le remplacer par un ou plusieurs tags appropriés : *inbox*,*free*,*gmail*,*spam*,*archive*,...
 La partie spam ne marche pas pour l'instant. C'est une config simple qui me permet d'avoir une INBOX unifiée et une INBOX par adresse mail également. NotMuch peut vous permettre également de tagger et donc de retrouver simplement les mails de mailing list ou d'un expéditeur particulier.
 
 ~~~~
@@ -78,33 +109,10 @@ notmuch tag +archive -inbox -- date:..300d and tag:dvlp
 echo "post-new complete; goodbye"
 ~~~~
 
-### Config générale
-
-~~~~
-[database]
-path=/home/.../.notmuch/mail/
-
-[user]
-name=MyName
-primary_email=xxxx@developont.fr
-other_email=xxxxx@gmail.com;xxx@free.fr;
-
-[new]
-tags=new;
-ignore=
-
-[search]
-exclude_tags=deleted;spam;
-
-[maildir]
-synchronize_flags=true
-
-[crypto]
-gpg_path=gpg
-~~~~
-
 
 ##  Alot -- config
+
+La config d'alot consiste à définir les différents comptes mails que l'on veut gérer en décrivant : le nom de l'utilisateur, son mail, la commande pour envoyer un mail avec ce compte, les répertoires pour stocker les messages envoyés et les brouillons. On définit également dans cette config ses raccourcis clavier ainsi que différents icône ou style particulier pour des attributs de certains mails (avec attachement, répondu, spam, ...)
 
 ~~~~
 theme=solarized_dark
@@ -196,7 +204,146 @@ editor_cmd="vim +4 -u ~/.vimrc_forMutt +startinsert"
 
 ## Alot -- theme
 
+Ci-dessous, le thème qui définit un style différent pour chaque ligne (mail) en fonction de son appartenance à une compte mail.
 
+base03 = 'dark gray'
+base02 = 'black'
+base01 = 'light green'
+base00 = 'yellow'
+base0 = 'default'
+base1 = 'dark gray'
+base2 = 'light gray'
+base3 = 'white'
+yellow = 'brown'
+orange = 'light red'
+red = 'dark red'
+magenta = 'dark magenta'
+violet = 'light magenta'
+blue = 'dark blue'
+cyan = 'dark cyan'
+green = 'dark green'
+
+
+[global]
+    footer = 'standout','default','%(base0)s','%(base02)s','%(base0)s','%(base02)s'
+    body = 'default','default','%(base0)s','%(base03)s','%(base0)s','%(base03)s'
+    notify_error = 'standout','default','%(base3)s','%(red)s','%(base3)s','%(red)s'
+    notify_normal = 'default','default','%(blue)s','%(base02)s','%(blue)s','%(base02)s'
+    prompt = 'default','default','%(base0)s','%(base02)s','%(base0)s','%(base02)s'
+    tag = 'default','default','%(yellow)s','%(base03)s','%(yellow)s','%(base03)s'
+    tag_focus = 'standout','default','%(base03)s','%(yellow)s','%(base03)s','%(yellow)s'
+[help]
+    text = 'default','default','%(base0)s','%(base02)s','%(base0)s','%(base02)s'
+    section = 'underline','default','%(cyan)s,bold','%(base02)s','%(cyan)s,bold','%(base02)s'
+    title = 'standout','default','%(yellow)s','%(base02)s','%(yellow)s','%(base02)s'
+    frame = 'standout','default','%(base1)s','%(base02)s','%(base1)s,bold','%(base02)s'
+[taglist]
+    line_even = 'default','default','%(base0)s','%(base02)s','%(base0)s','%(base02)s'
+    line_focus = 'standout','default','%(base1)s','%(base01)s','%(base1)s','%(base01)s'
+    line_odd = 'default','default','%(base0)s','%(base03)s','%(base0)s','%(base03)s'
+[bufferlist]
+    line_even = 'default','default','%(base0)s','%(base02)s','%(base0)s','%(base02)s'
+    line_focus = 'standout','default','%(base1)s','%(base01)s','%(base1)s','%(base01)s'
+    line_odd = 'default','default','%(base0)s','%(base03)s','%(base0)s','%(base03)s'
+[thread]
+    attachment = 'default','default','%(base0)s','%(base03)s','%(base0)s','%(base03)s'
+    attachment_focus = 'underline','default','%(base02)s','%(yellow)s','%(base02)s','%(yellow)s'
+    arrow_bars = 'default','default','%(yellow)s','%(base03)s','%(yellow)s','%(base03)s'
+    arrow_heads = 'default','default','%(yellow)s','%(base03)s','%(yellow)s','%(base03)s'
+    body = 'default','default','%(base0)s','%(base03)s','%(base0)s','%(base03)s'
+    body_focus = 'default','default','%(base0)s','%(base02)s','%(base0)s','%(base02)s'
+    header = 'default','default','%(base0)s','%(base03)s','%(base0)s','%(base03)s'
+    header_key = 'default','default','%(red)s','%(base03)s','%(red)s','%(base03)s'
+    header_value = 'default','default','%(blue)s','%(base03)s','%(blue)s','%(base03)s'
+    [[summary]]
+      even = 'default','default','%(base0)s','%(base02)s','%(base0)s','%(base02)s'
+      focus = 'standout','default','%(base1)s','%(base01)s','%(base1)s','%(base01)s'
+      odd = 'default','default','%(base0)s','%(base03)s','%(base0)s','%(base03)s'
+[envelope]
+    body = 'default','default','%(base0)s','%(base03)s','%(base0)s','%(base03)s'
+    header = 'default','default','%(base0)s','%(base03)s','%(base0)s','%(base03)s'
+    header_key = 'default','default','%(red)s','%(base03)s','%(red)s','%(base03)s'
+    header_value = 'default','default','%(blue)s','%(base03)s','%(blue)s','%(base03)s'
+[search]
+    [[threadline]]
+        normal = 'default','default','%(base1)s','%(base03)s','%(base1)s','%(base03)s'
+        focus = 'standout','default','%(base02)s','%(base01)s','%(base02)s','%(base01)s'
+        parts = date,mailcount,authors,subject,tags
+        [[[date]]]
+            normal = 'default','default','%(yellow)s','%(base03)s','%(yellow)s','%(base03)s'
+            focus = 'standout','default','%(base02)s,bold','%(base01)s','%(base02)s,bold','%(base01)s'
+            alignment = right
+            width = fit, 9, 9
+        [[[mailcount]]]
+            normal = 'default','default','%(blue)s','%(base03)s','%(blue)s','%(base03)s'
+            focus = 'standout','default','%(base02)s','%(base01)s','%(base02)s','%(base01)s'
+        [[[tags]]]
+            normal = 'default','default','%(cyan)s','%(base03)s','%(cyan)s','%(base03)s'
+            focus = 'standout','default','%(base02)s','%(base01)s','%(base02)s','%(base01)s'
+        [[[authors]]]
+            normal = 'default,underline','default','%(blue)s','%(base03)s','%(blue)s','%(base03)s'
+            focus = 'standout','default','%(base02)s','%(base01)s','%(base02)s','%(base01)s'
+            width = 'fit',0,30
+        [[[subject]]]
+            normal = 'default','default','%(base0)s','%(base03)s','%(base0)s','%(base03)s'
+            focus = 'standout','default','%(base02)s,bold','%(base01)s','%(base02)s,bold','%(base01)s'
+            width = 'weight',1
+        [[[content]]]
+            normal = 'default','default','%(base01)s','%(base03)s','%(base01)s','%(base03)s'
+            focus = 'standout','default','%(base02)s','%(base01)s','%(base02)s','%(base01)s'
+	
+	 [[threadline-unread-free]]
+      tagged_with = 'unread','free'
+       #query = 'tag:unread AND tag:free'
+       		[[[date]]]
+            normal = 'default','default','%(yellow)s','%(base03)s','%(base00)s','%(base03)s'
+            [[[mailcount]]]
+	         normal = 'default','default','%(base02)s','%(base03)s','%(base02)s,bold','%(base01)s'
+	[[threadline-unread-gmail]]
+      tagged_with = 'unread','gmail'
+       #query = 'tag:unread AND tag:free'
+       		[[[date]]]
+            normal = 'default','default','%(yellow)s','%(base03)s','%(base00)s','%(base03)s'
+            [[[mailcount]]]
+	         normal = 'default','default','%(green)s,bold','%(base03)s','%(base02)s,bold','%(green)s'
+	         	
+	 [[threadline-unread-dvlp]]
+      tagged_with = 'unread','dvlp'
+       #query = 'tag:unread AND tag:free'
+       		[[[date]]]
+            normal = 'default','default','%(yellow)s','%(base03)s','%(base00)s','%(base03)s'
+            [[[mailcount]]]
+	         normal = 'default','default','%(green)s,bold','%(base03)s','%(base02)s,bold','%(green)s'
+	         
+	 [[threadline-unread-rest]]
+      tagged_with = 'unread'
+       #query = 'tag:unread AND tag:free'
+       		[[[date]]]
+            normal = 'default','default','%(yellow)s','%(base03)s','%(base00)s','%(base03)s'
+            [[[mailcount]]]
+	        normal = 'default','default','%(blue)s','%(base03)s','%(blue)s','%(base03)s'
+
+  	
+	   [[threadline-free]]
+       		tagged_with = 'free'
+       		[[[mailcount]]]
+	         normal = 'default','default','%(base02)s','%(base03)s','%(base02)s,bold','%(base01)s'
+	         
+	   [[threadline-gmail]]
+       		tagged_with = 'gmail'
+       		[[[mailcount]]]
+	         normal = 'default','default','%(green)s,bold','%(base03)s','%(base02)s,bold','%(yellow)s'
+	   [[threadline-dvlp]]
+      		tagged_with = 'dvlp'
+       		[[[mailcount]]]
+	         normal = 'default','default','%(green)s,bold','%(base03)s','%(base02)s,bold','%(green)s'
+
+	   [[threadline-flag]]
+       tagged_with = 'flagged'
+       		[[[tags]]]
+	         	normal = 'default','default','%(red)s,bold','%(base03)s','%(red)s,bold','%(blue)s'
+	     
+~~~~
 
 # Isync & Msmtp
 
@@ -215,8 +362,140 @@ graph LR;
 
 ## Isync -- config
 
+
+
+~~~~
+IMAPAccount gmail
+# Address to connect to
+Host imap.gmail.com
+User XXXXX@gmail.com
+Pass XXXXXX
+AuthMechs LOGIN
+SSLType IMAPS
+
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Path ~/Mail/.notmuch/mail/gmail/
+Inbox ~/Mail/.notmuch/mail/gmail/INBOX
+
+Channel gmail
+Master :gmail-remote:
+Slave :gmail-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *
+
+
+IMAPAccount developont
+# Address to connect to
+Host mail.developont.fr
+User XXXXXX
+Pass XXXXXX
+AuthMechs LOGIN
+SSLType IMAPS
+
+CertificateFile ~/.cert/mail.developont.pem
+
+IMAPStore developont-remote
+Account developont
+
+MaildirStore developont-local
+Path ~/Mail/.notmuch/mail/developont/
+Inbox ~/Mail/.notmuch/mail/developont/INBOX
+
+Channel developont
+Master :developont-remote:
+Slave :developont-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *
+
+
+IMAPAccount free
+# Address to connect to
+Host imap.free.fr
+User XXXXXX@free.fr
+Pass XXXXXX
+AuthMechs LOGIN
+SSLType None
+
+
+IMAPStore free-remote
+Account free
+
+MaildirStore free-local
+Path ~/Mail/.notmuch/mail/free/
+Inbox ~/Mail/.notmuch/mail/free/INBOX
+
+Channel free
+Master :free-remote:
+Slave :free-local:
+#Patterns "INBOX" "[Gmail]/Sent Mail" "[Gmail]/Drafts" "[Gmail]/Starred"
+Patterns *
+Create Both
+Expunge Both
+SyncState *
+
+~~~~
+
+~~~~
+#!/bin/bash
+
+/usr/bin/mbsync -a
+/usr/bin/notmuch new
+~~~~
+
 ## Msmtp -- config
 
+
+~~~~
+defaults
+logfile        ~/.msmtp.log
+
+account gmail
+tls on
+host smtp.gmail.com
+port 587
+from XXXXXX@gmail.com
+auth on
+user XXXXXX
+password XXXXXX
+tls_starttls on
+tls_certcheck on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+
+account free
+host smtp.free.fr
+from XXXXXX@free.fr
+tls on
+auth on
+port 465
+user XXXXXX
+password XXXXXX
+tls_starttls off
+tls_certcheck off
+
+account developont 
+host developont.fr
+tls on
+from XXXXXX@developont.fr
+auth on
+port 465
+user XXXXXX
+password XXXXXX
+tls_starttls off
+tls_certcheck off
+
+account default : developont 
+~~~~
+
+
 # TODO
- Avoir une gestion de l'adresse book directement depuis alot.
- Avoir une solution de spam efficace.
+
++ Avoir une gestion de l'adresse book directement depuis alot.
++ Avoir une solution de spam efficace.

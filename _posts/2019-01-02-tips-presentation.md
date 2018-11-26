@@ -3,6 +3,7 @@ layout: article
 title: Tips. ne pas trop râter sa présentation
 published: false
 category: formation
+tags: formation
 ---
 
 # Enfin, un blog!
