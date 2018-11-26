@@ -5,7 +5,7 @@ articles:
 ---
 
 
-Here's a sample "posts list".
+Ici c'est Papa-riz
 
 <ul class="posts">
   {% for post in site.posts %}
