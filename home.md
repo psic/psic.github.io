@@ -1,5 +1,5 @@
 ---
-layout: articles
+layout: home
 title: Articles - Item (Excerpt + Read More + Info)
 articles:
   data_source: site.page
