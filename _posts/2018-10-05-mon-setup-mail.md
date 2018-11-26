@@ -31,7 +31,7 @@ graph LR;
 
 Il ne reste plus qu'un logiciel front-end pour afficher les mails et les gérer en utilisant les tags de notMuch. Mutt le fait, mais c'est encore une fois compliqué à configurer. Le logiciel [aLot](http://alot.readthedocs.io/) par contre fait cela très bien, mais alors vraiment bien de façons simple et élégante.
 
-![alot  screenshot](/assets/alot.png)
+![alot  screenshot](/assets/images/alot.png)
 
 
 ## NotMuch -- config
@@ -208,7 +208,7 @@ editor_cmd="vim +4 -u ~/.vimrc_forMutt +startinsert"
 ## Alot -- theme
 
 Ci-dessous, le thème qui définit un style différent pour chaque ligne (mail) en fonction de son appartenance à une compte mail.
-
+~~~~
 base03 = 'dark gray'
 base02 = 'black'
 base01 = 'light green'
