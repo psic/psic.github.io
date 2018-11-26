@@ -1,11 +1,14 @@
 ---
-layout: home
+layout: articles
+title: Articles - Item (Cover + Excerpt + Read More)
 articles:
-  excerpt_type: html
+  data_source: site.page
+  show_excerpt: true
+  show_readmore: true
 ---
 
 
-Ici c'est Papa-riz
+Ici c'est Papa-riz ri
 
 <ul class="posts">
   {% for post in site.posts %}
