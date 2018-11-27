@@ -1,8 +1,9 @@
 ---
 layout: article
-title: Tips. ne pas trop râter sa présentation
-category: formation
-tags: formation
+title: Ne pas trop râter sa présentation
+category: formation tips
+tags: formation tips
+published: false
 ---
 
 TODO

@@ -1,7 +1,8 @@
 ---
 layout: article
-title: Tips. ne pas trop galérer à écrire un rapport ou mémoire
-category: formation
-tags: formation
+title: Ne pas trop galérer à écrire un rapport ou mémoire
+category: formation tips
+tags: formation tips
+published: false
 ---
 TODO

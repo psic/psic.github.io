@@ -6,7 +6,7 @@ tags: ressource
 
 ---
 
-
+<!--more-->
 + [Logicomix](http://www.logicomix.com/fr/)
 > Le roman graphique Logicomix embrasse une période de soixante années. Il tire son inspiration d’une quête épique, celle des fondements des mathématiques.
 >Ce fut une aventure intellectuelle héroïque. La plupart de ses protagonistes ont payé leur savoir d’immenses souffrances personnelles ; certains y ont perdu la raison. Ce livre raconte leur histoire d’une manière vivante, complexe et accessible à la fois. Il relie les combats philosophiques aux tumultes psychologiques ainsi qu’aux grands événements historiques et aux conflits idéologiques qui les ont suscités.
