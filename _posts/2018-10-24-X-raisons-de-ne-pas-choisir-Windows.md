@@ -1,7 +1,6 @@
 ---
 layout: article
 title: X raisons de ne pas choisir ni Windows ni Mac.
-published: false
 ---
 
 # Du point de vue professionnel
