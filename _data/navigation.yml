@@ -1,6 +1,6 @@
 header:
   - titles:
-      en:       Archive
+      en:       par Tag
       zh:       归档
       zh-Hans:  归档
       zh-Hant:  歸檔
@@ -11,12 +11,3 @@ header:
       zh-Hans:  关于
       zh-Hant:  關於
     url:        /about.html
-  - titles:
-      en:       Home2
-    url:        /home2.html
-  - titles:
-      en:       Homme
-    url:        /homme.html
-  - titles:
-      en:       Home
-    url:        /home.html
