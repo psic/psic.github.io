@@ -12,8 +12,11 @@ header:
       zh-Hant:  關於
     url:        /about.html
   - titles:
-      en:       Home
-    url:        /home.html
+      en:       Home2
+    url:        /home2.html
   - titles:
       en:       Homme
     url:        /homme.html
+  - titles:
+      en:       Home
+    url:        /home.html
