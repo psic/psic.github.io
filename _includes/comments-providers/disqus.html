@@ -1,6 +1,9 @@
 {%- if page.key and
   site.comments.disqus.shortname -%}
 
+page key : {{page.key}} <BR>
+disqus shortname : {{ site.comments.disqus.shortname }} <BR>
+
   <div id="disqus_thread"></div>
   <script>
   /**
