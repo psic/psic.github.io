@@ -3,7 +3,7 @@ layout: article
 title: Une boîte mail unifiée en CLI
 category: CLI
 mermaid: true
-comments: true
+comment: true
 tags: CLI
 
 ---

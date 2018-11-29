@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Un deevklog ? WTF ?
-comments: true
+comment: true
 category: presentation
 tags: presentation
 ---

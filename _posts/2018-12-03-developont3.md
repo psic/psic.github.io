@@ -2,7 +2,7 @@
 layout: article
 title: Develo'Pont des financements pour notre promo II
 category: formation formateur
-comments: true
+comment: true
 tags: formation formateur
 ---
 

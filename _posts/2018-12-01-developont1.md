@@ -2,7 +2,7 @@
 layout: article
 title: Une fabrique sociale de codeurs en milieu rurale
 category: formation formateur
-comments: true
+comment: true
 tags: formation formateur
 ---
 
