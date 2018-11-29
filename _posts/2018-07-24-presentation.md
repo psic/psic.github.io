@@ -3,6 +3,7 @@ layout: article
 title: Un deevklog ? WTF ?
 comment: true
 category: presentation
+key: presentation
 tags: presentation
 ---
 

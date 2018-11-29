@@ -4,6 +4,7 @@ title: Une boîte mail unifiée en CLI
 category: CLI
 mermaid: true
 comment: true
+key: mail
 tags: CLI
 
 ---
