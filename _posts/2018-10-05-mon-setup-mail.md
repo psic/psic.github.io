@@ -121,7 +121,7 @@ echo "post-new complete; goodbye"
 
 La config d'alot consiste à définir les différents comptes mails que l'on veut gérer en décrivant : le nom de l'utilisateur, son mail, la commande pour envoyer un mail avec ce compte, les répertoires pour stocker les messages envoyés et les brouillons. On définit également dans cette config ses raccourcis clavier ainsi que différents icône ou style particulier pour des attributs de certains mails (avec attachement, répondu, spam, ...).
 On utilise l'outils *msmtp* pour envoyer un mail :
-`/usr/bin/msmtp -a *account*`
+`/usr/bin/msmtp -a *account*`.
 On utilise *vim* pour éditer ces mails. La commande `vim +4 -u ~/.vimrc_forMutt +startinsert` me permet d'ouvrir un vim avec une config spéciale, et pour le cas plus légère, pour l'édition de mail; d'ouvrir vim directement en mode édition avec le curseur sur la 4ème ligne.
 
 ~~~~
@@ -464,7 +464,7 @@ SyncState *
 
 ## Msmtp -- config
 
-Enfin pour envoyer les mails, j'utilise encore un outils en ligne de commande, [msmtp](https://marlam.de/msmtp/). Les remarques pour la configuration d'isync s'appliquent également pour la configuration de msmtp. On envoie un mail en utilisant un compte particulier avec `msmtp -a *account*` 
+Enfin pour envoyer les mails, j'utilise encore un outils en ligne de commande, [msmtp](https://marlam.de/msmtp/). Les remarques pour la configuration d'isync s'appliquent également pour la configuration de msmtp. On envoie un mail en utilisant un compte particulier avec `msmtp -a *account*`. `/usr/bin/msmtp -a *account*`
 
 C'est ce qui est utilisé dans la configuration de *alot*
 ~~~~
@@ -509,7 +509,7 @@ account default : developont
 ~~~~
 
 
-# TODO
+# Conclusion & TODO
 
 + Avoir une gestion de l'adresse book directement depuis alot.
 + Avoir une solution de spam efficace.
