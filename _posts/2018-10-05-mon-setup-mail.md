@@ -120,6 +120,7 @@ echo "post-new complete; goodbye"
 ##  Alot -- config
 
 La config d'alot consiste à définir les différents comptes mails que l'on veut gérer en décrivant : le nom de l'utilisateur, son mail, la commande pour envoyer un mail avec ce compte, les répertoires pour stocker les messages envoyés et les brouillons. On définit également dans cette config ses raccourcis clavier ainsi que différents icône ou style particulier pour des attributs de certains mails (avec attachement, répondu, spam, ...).
+
 On utilise l'outils *msmtp* pour envoyer un mail :
 `/usr/bin/msmtp -a *account*`.
 On utilise *vim* pour éditer ces mails. La commande `vim +4 -u ~/.vimrc_forMutt +startinsert` me permet d'ouvrir un vim avec une config spéciale, et pour le cas plus légère, pour l'édition de mail; d'ouvrir vim directement en mode édition avec le curseur sur la 4ème ligne.

@@ -6,6 +6,8 @@ tags: ressource
 
 ---
 
+C'est pas parce qu'on fait de l'informatique qu'on a pas de le droit d'avoir des BDs avec de l'humour dedans. Et c'est pas parce que c'est une BD que ça ne peut pas parler d'informatique de façons intelligente.
+
 <!--more-->
 + [Logicomix](http://www.logicomix.com/fr/)
 > Le roman graphique Logicomix embrasse une période de soixante années. Il tire son inspiration d’une quête épique, celle des fondements des mathématiques.
@@ -19,7 +21,8 @@ tags: ressource
 ![cyberbook](https://bdmetrique.files.wordpress.com/2016/02/cyberbook.png?w=529 "couverture")
 
 + [Commit Strip](https://www.commitstrip.com/fr/)
-+ [Monkey User](https://www.monkeyuser.com/)
+
++ [Monkey User](https://www.monkeyuser.com/) : Dans ces strips, il y en a un grand nombre qui peuvent être utilisées pour illustrer ou expliquer des concepts informatique, notamment à des étudiants.
 
 ![Test Driven Development](https://www.monkeyuser.com/assets/images/2018/107-applied-tdd.png "TDD")
 
