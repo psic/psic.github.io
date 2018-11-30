@@ -9,7 +9,7 @@ tags: CLI
 
 ---
 
-J'étais un utilisateur très satisfait de claws-mail [liens] (ou sylpheed) tant que je n'avais qu'une seule boîte mail. La multiplication et diversification de mes activités professionnelles et associatives ainsi que la quasi-obligation d'avoir un compte chez gmail pour accéder à certains services font que je me retrouve (selon les saison) avec un minimum de trois boîtes mails actives. Inutile de préciser que l'utilisation de webmail n'est pour moi qu'une solution de secours d'autant qu'il est plus pratique d'avoir un outils dédier aux mails, et non pas un ou plusieurs onglets perdu quelques part dans la forêt d'onglets qu'est mon navigateur. Mais surtout, ce que je voulais, c'est un lecteur de mail qui me propose une vue unifiée de l'ensemble de mes boîtes mails (en IMAP). Voir en un coup d'oeil l'ensemble des mails de mes boîtes de réception et pouvoir y répondre ou agir sur un mail en cliquant un minimum (avec une synchronisation totale de ce qui est fait en local et de ce qu'il y a sur le serveur). Je n'ai pas trouvé de lecteurs de mails graphiques ni réussi à configurer mon lecteur préféré (claws-mail) afin d'obtenir ce résultat. Je me suis alors tourné vers des solutions en mode console, d'autant plus que je recherche de plus en plus ce type de solutions, surtout quand elles sont bien pensées.
+J'étais un utilisateur très satisfait de [claws-mail](https://www.claws-mail.org/) (ou [sylpheed](https://sylpheed.sraoss.jp/en/)) tant que je n'avais qu'une seule boîte mail. La multiplication et diversification de mes activités professionnelles et associatives ainsi que la quasi-obligation d'avoir un compte chez gmail pour accéder à certains services font que je me retrouve (selon les saison) avec un minimum de trois boîtes mails actives. Inutile de préciser que l'utilisation de webmail n'est pour moi qu'une solution de secours d'autant qu'il est plus pratique d'avoir un outils dédier aux mails, et non pas un ou plusieurs onglets perdu quelques part dans la forêt d'onglets qu'est mon navigateur. Mais surtout, ce que je voulais, c'est un lecteur de mail qui me propose une vue unifiée de l'ensemble de mes boîtes mails (en IMAP). Voir en un coup d'oeil l'ensemble des mails de mes boîtes de réception et pouvoir y répondre ou agir sur un mail en cliquant un minimum (avec une synchronisation totale de ce qui est fait en local et de ce qu'il y a sur le serveur). Je n'ai pas trouvé de lecteurs de mails graphiques ni réussi à configurer mon lecteur préféré (claws-mail) afin d'obtenir ce résultat. Je me suis alors tourné vers des solutions en mode console, d'autant plus que je recherche de plus en plus ce type de solutions, surtout quand elles sont bien pensées.
 
 <!--more-->
 
@@ -119,7 +119,10 @@ echo "post-new complete; goodbye"
 
 ##  Alot -- config
 
-La config d'alot consiste à définir les différents comptes mails que l'on veut gérer en décrivant : le nom de l'utilisateur, son mail, la commande pour envoyer un mail avec ce compte, les répertoires pour stocker les messages envoyés et les brouillons. On définit également dans cette config ses raccourcis clavier ainsi que différents icône ou style particulier pour des attributs de certains mails (avec attachement, répondu, spam, ...)
+La config d'alot consiste à définir les différents comptes mails que l'on veut gérer en décrivant : le nom de l'utilisateur, son mail, la commande pour envoyer un mail avec ce compte, les répertoires pour stocker les messages envoyés et les brouillons. On définit également dans cette config ses raccourcis clavier ainsi que différents icône ou style particulier pour des attributs de certains mails (avec attachement, répondu, spam, ...).
+On utilise l'outils *msmtp* pour envoyer un mail :
+`/usr/bin/msmtp -a *account*`
+On utilise *vim* pour éditer ces mails. La commande `vim +4 -u ~/.vimrc_forMutt +startinsert` me permet d'ouvrir un vim avec une config spéciale, et pour le cas plus légère, pour l'édition de mail; d'ouvrir vim directement en mode édition avec le curseur sur la 4ème ligne.
 
 ~~~~
 theme=solarized_dark
@@ -354,6 +357,8 @@ green = 'dark green'
 
 # Isync & Msmtp
 
+[Isync](http://isync.sourceforge.net/)(ou mbsync) est un logiciel qui me sert à synchroniser les mails de mon PC avec mes différentes boîtes mails, et tout ça en IMAP.  Je n'ai pas utiliser fetchmail, car il ne sert qu'a rapatrier ses mail, hors je voulais une synchro complète, c'est à dire que si je supprime un mail sur mon PC, je veux qu'il soit supprimer également sur le serveur correspondant. De la même façons, un mail lu ou flaggé comme important sur mon PC devra pouvoir être vu avec ces modifications d'état par une autre lecteur de mail (sur ma tablette ou mon téléphone). Seul Isync et [OfflineImap](http://www.offlineimap.org/) prennent en compte ce genre d'opération de synchronisation.
+
 ```mermaid
 graph LR;
     A[IMAP -- Isync]
@@ -369,7 +374,7 @@ graph LR;
 
 ## Isync -- config
 
-
+La configuration d'Isync est simple et basique. On définit chaque compte avec ce qu'il faut comme dans un maileur classique. Quand on fait les choses mieux que moi, on ne met pas en clair ses mots de passe dans le fichier de config. Un petit script bash (ci-dessous) est exécuté toute les 3 minutes en cron afin de récupérer mes mails et d'appeler notMuch par la suite.
 
 ~~~~
 IMAPAccount gmail
@@ -459,7 +464,10 @@ SyncState *
 
 ## Msmtp -- config
 
+Enfin pour envoyer les mails, j'utilise encore un outils en ligne de commande, [msmtp](https://marlam.de/msmtp/). Les remarques pour la configuration d'isync s'appliquent également pour la configuration de msmtp. On envoie un mail en utilisant un compte particulier avec :
+` msmtp -a *account*` 
 
+C'est ce qui est utilisé dans la configuration de *alot*
 ~~~~
 defaults
 logfile        ~/.msmtp.log
