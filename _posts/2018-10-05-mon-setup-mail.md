@@ -464,7 +464,7 @@ SyncState *
 
 ## Msmtp -- config
 
-Enfin pour envoyer les mails, j'utilise encore un outils en ligne de commande, [msmtp](https://marlam.de/msmtp/). Les remarques pour la configuration d'isync s'appliquent également pour la configuration de msmtp. On envoie un mail en utilisant un compte particulier avec `msmtp -a *account*`. `/usr/bin/msmtp -a *account*`
+Enfin pour envoyer les mails, j'utilise encore un outils en ligne de commande, [msmtp](https://marlam.de/msmtp/). Les remarques pour la configuration d'isync s'appliquent également pour la configuration de msmtp. On envoie un mail en utilisant un compte particulier avec `msmtp -a *account*`. 
 
 C'est ce qui est utilisé dans la configuration de *alot*
 ~~~~
