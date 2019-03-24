@@ -514,6 +514,7 @@ account default : developont
 # Conclusion & TODO
 
 **Youpi!!** On a une boîte mail unifiée. Cela peut paraître un peu compliqué pour *si peu*. J'aime bien être bien outillé, surtout pour travailler, en plus j'ai appris et découvert plein de trucs *sur la route*. Pour obtenir la configuration finale, il y a eu beaucoup d'essais, de logiciel notamment, des détours (vers Mutt). Chaque solution essayée prend du temps à configurer et à tester en condition réelle afin de saisir ce qui ne va pas, et d'imaginer et de trouver une meilleur solution. *La beauté* de la solution que je vous propose réside dans la beauté de **GNU/Linux**. On y trouve tout un tas de petits outils que l'on peut assez facilement faire marcher les uns avec les autres. Ici, en décomposant le processus du mail, j'ai réussi à mettre en place ma boîte mail tout comme je la *rêvais*. En plus de ça, j'ai fait ma première contribution à un prochain opensource en contribuant à la doc de ce projet.
+
 ## TODO
 
 + Pouvoir ajouter une adresse mail à l'adresse abook directement depuis alot.
