@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Une fabrique sociale de codeurs en milieu rurale
+title: Une fabrique sociale de codeurs en milieu rural
 category: formation formateur
 comment: true
 key: devI
