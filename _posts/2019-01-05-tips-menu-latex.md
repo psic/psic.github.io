@@ -6,11 +6,13 @@ tags: projet latex
 published: true
 ---
 
+Ici, juste un menu/une carte de restaurant fait avec \LaTeX\
 
-[git](https://github.com/psic/rajusMenu)
-[latex source](/assets/images/rajusMenu/menu_2016.tex)
+[Le fichier source LaTeX](/assets/images/rajusMenu/menu_2016.tex) (utilisant le [package psvectorian](https://ctan.org/tex-archive/graphics/pstricks/contrib/pst-vectorian))
 
-[package psvectorian](https://ctan.org/tex-archive/graphics/pstricks/contrib/pst-vectorian)
+[sur git](https://github.com/psic/rajusMenu)
 
 ![apercu menu](/assets/images/rajusMenu/menu_2016.png)
 
+
+**SiÇaPeutServir!**
