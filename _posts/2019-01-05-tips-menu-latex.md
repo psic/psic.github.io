@@ -6,7 +6,7 @@ tags: projet latex
 published: true
 ---
 
-Ici, juste un menu/une carte de restaurant fait avec [L⁽A)T⁽_E)X](https://fr.wikibooks.org/wiki/LaTeX)
+Ici, juste un menu/une carte de restaurant fait avec L^AT_EX [L^(A)T^(_E)X](https://fr.wikibooks.org/wiki/LaTeX)
 
 [Le fichier source LaTeX](/assets/images/rajusMenu/menu_2016.tex) (utilisant le [package psvectorian](https://ctan.org/tex-archive/graphics/pstricks/contrib/pst-vectorian))
 
