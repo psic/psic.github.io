@@ -12,7 +12,7 @@ Ici, juste un menu/une carte de restaurant fait avec \LaTeX\
 
 [sur git](https://github.com/psic/rajusMenu)
 
-![apercu menu](/assets/images/rajusMenu/menu_2016.png)
+![apercu menu](/assets/images/rajusMenu/menu_2016.jpg)
 
 
 **SiÇaPeutServir!**
