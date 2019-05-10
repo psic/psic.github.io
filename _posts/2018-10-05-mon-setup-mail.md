@@ -515,6 +515,10 @@ account default : developont
 
 **Youpi!!** On a une boîte mail unifiée. Cela peut paraître un peu compliqué pour *si peu*. J'aime bien être bien outillé, surtout pour travailler, en plus j'ai appris et découvert plein de trucs *sur la route*. Pour obtenir la configuration finale, il y a eu beaucoup d'essais, de logiciel notamment, des détours (vers Mutt). Chaque solution essayée prend du temps à configurer et à tester en condition réelle afin de saisir ce qui ne va pas, et d'imaginer et de trouver une meilleur solution. *La beauté* de la solution que je vous propose réside dans la beauté de **GNU/Linux**. On y trouve tout un tas de petits outils que l'on peut assez facilement faire marcher les uns avec les autres. Ici, en décomposant le processus du mail, j'ai réussi à mettre en place ma boîte mail tout comme je la *rêvais*. En plus de ça, j'ai fait ma première contribution à un prochain opensource en contribuant à la doc de ce projet.
 
+**Edit : ** 
+
+Début 2019, il existe 2 applications avec GUI (interface) qui permettent facilement (en 3 clicks) d'avoir une boîte mail unifié : Evolution et Kmail (venant avec le pack KDE Applications 18.12) -- Oups pardon Thunderbird le fait également, mais je ne sais pas pourquoi je ne veux pas l'utiliser -- Comme je n'ai toujours pas trouver une solution pour gérer le spam dans la solution expliquée dans cet article, j'utilise Evolution. Malheureusement, ce logiciel ne me satisfait pas complètement notamment car il est un peu buggé. J'attends que le Kmail soit poussé dans mes repos logiciel et je pense que tout ira bien.
+
 ## TODO
 
 + Pouvoir ajouter une adresse mail à l'adresse abook directement depuis alot.

@@ -6,7 +6,7 @@ tags: projet latex
 published: true
 ---
 
-Ici, juste un menu/une carte de restaurant fait avec [L<sup>A</sup>T<sub>E</sub>X](https://fr.wikibooks.org/wiki/LaTeX)
+Un menu/une carte de restaurant fait avec [L<sup>A</sup>T<sub>E</sub>X](https://fr.wikibooks.org/wiki/LaTeX)
 
 [Le fichier source LaTeX](/assets/images/rajusMenu/menu_2016.tex) (utilisant le [package psvectorian](https://ctan.org/tex-archive/graphics/pstricks/contrib/pst-vectorian))
 
