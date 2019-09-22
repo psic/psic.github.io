@@ -93,8 +93,8 @@ chart: # false (default), true
 
 ## => Paginate
 ##############################
-#paginate: 8
-#paginate_path: /page:num # don't change this unless for special need
+paginate: 200
+#aginate_path: /page:num # don't change this unless for special need
 
 
 ## => Sources
@@ -197,7 +197,7 @@ defaults:
 ##############################
 plugins:
   - jekyll-feed
-#  - jekyll-paginate
+  - jekyll-paginate
   - jekyll-sitemap
   - jemoji
   - jekyll-seo-tag
