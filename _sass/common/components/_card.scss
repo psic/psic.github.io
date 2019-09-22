@@ -2,6 +2,10 @@
 .card {
  // max-width: 18rem;
   max-width: 100%;
+  line-height:1.1;
+  font-style:italic;
+  background-color: rgba(180, 155, 146, 0.5);
+  color: rgba(255,255,255,0.85);
   border-radius: map-get($base, border-radius);
   @include box-shadow();
   @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
@@ -13,6 +17,9 @@
     border-bottom-right-radius: map-get($base, border-radius);
     border-bottom-left-radius: map-get($base, border-radius);
   }
+}
+.card h4{
+	text-align:right;
 }
 
 .cell {
