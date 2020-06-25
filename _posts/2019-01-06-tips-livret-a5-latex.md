@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Faire un livret A5 recto-verso avec Latex
-comments:true
+comments: true
 category: latex projet
 tags: latex projet
 published: true
