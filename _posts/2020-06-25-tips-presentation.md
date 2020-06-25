@@ -1,10 +1,9 @@
 ---
 layout: article
 title: Ne pas trop râter sa présentation
-comment: true
+comments: true
 category: formation tips
 tags: formation tips
-comment: true
 published: true
 ---
 
