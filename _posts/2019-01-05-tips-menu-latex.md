@@ -3,7 +3,7 @@ layout: article
 title: Un menu de restaurant avec Latex
 category: projet latex
 tags: projet latex
-comment: true
+comments: true
 published: true
 ---
 
