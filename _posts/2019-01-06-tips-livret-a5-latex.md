@@ -4,6 +4,7 @@ title: Faire un livret A5 recto-verso avec Latex
 comment: true
 category: latex projet
 tags: latex projet
+key: latexI
 ---
 
 Un livret A5 fait avec [L<sup>A</sup>T<sub>E</sub>X](https://fr.wikibooks.org/wiki/LaTeX). C'est un livret à destination des écoles de foot, pour les parents et les enfants.

@@ -4,6 +4,7 @@ title: Un menu de restaurant avec Latex
 category: projet latex
 tags: projet latex
 comment: true
+key: latexII
 ---
 
 Un menu/une carte de restaurant fait avec [L<sup>A</sup>T<sub>E</sub>X](https://fr.wikibooks.org/wiki/LaTeX)
