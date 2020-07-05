@@ -5,6 +5,7 @@ comments: true
 category: formation tips
 tags: formation tips
 published: true
+key:prez
 ---
 
 Expliquer son travail à travers une présentation est un exercice récurent dans le monde de l'entreprise. Je vous propose de vous filer 2, 3 tuyaux pour vous aider dans cet exercice, celui des présentations dites "techniques". Le but de ces présentations est de faire passer un message, et vous êtes entièrement responsable que ce message passe (ou pas). Si quelqu'un s'endort, c'est que malheureusement votre présentation n'est pas très intéressante. La mission est de prendre l'auditoire par la main et de l'emmener au bout de votre présentation.
