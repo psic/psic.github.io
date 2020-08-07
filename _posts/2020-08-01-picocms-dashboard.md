@@ -29,9 +29,41 @@ Faire un dashboard, c'est exraire de votre base de données des informations per
 ## Intégrer des données MySQL
 
 On a un flat CMS (sans base de données) d'installé et qui fonctionne, et c'est là que ça devient bizarre, car on va le connecter à une ou plusieurs base de données. Pour en afficher le contenu sous forme de liste ou de graphes. J'ai ecrit deux plugins pour celà, car il est très simple en quelques lignes de php d'écrire un plugin pour *PicoCMS*. [PicoCMS-MySQLList](https://github.com/psic/PicoCMS-MySQLList) pour afficher les données sous forme de liste, et [PicoCMS-MySQLGraph](https://github.com/psic/PicoCMS-MySQLGraph) pour afficher le résultats de vos requêtes SQL sous forme de graphes. 
+t
+### Installer & configurer
 
-### Configurer l'accès à la BD
+#### Installation
 
+L'installation consiste simplement à copier les fichiers des repos github ci-dessus dans le repertoire `plugins` de votre installation. Soit vous clonez les repos, soit vous téléchargez les archives que vous décompressez. Ensuite, vous avez deux options. Soit vous placez ces fichiers dans des repertoires respectifs `MySQLGraphPlugin` et `MySQLListPlugin`. Soit vous placez le contenu de ces archives/repertoires directement à la racine du répertoire `plugins`, ce qui vous permettra de partager la configuration des connexions de base de données entre les deux plugins via le fichier `MySQLConfig.php` 
+
+#### Configuration des accès BD
+
+Les accès aux bases de données se configure dans un fichier `MySQLConfig.php`. Selon l'option choisit à l'installation des plugins, vous pouvez avoir un fichier de configuration à la racine du répertoire `plugins` avec le reste de fichiers php des plugins, ou alors un fichier de configuration dans chacun des répertoires des plugins. La configuration des connexions aux bases de donnéees se fait sous forme d'un tableau php, mais rien de compliqué :
+
+```
+return array(
+    'db1'=>array ( // database settings name for the plugin 
+            'host' => 'localhost', //database host
+	    'username' => 'admin', //database username
+            'password' => 'passwd1', //database password
+            'db_name' => 'db1_name' //database name
+		)
+ 	    );
+```
+Ici, on a configurer une base de données que l'on utilisera plus loin avec le nom `db1`. On pourait ajouter un autre tableau pour configurer un base de données supplémentaire.
+
+
+### Écrire ses requêtes SQL
+
+```
+mysql_source:
+ db1:                             # First database config name
+   #query_name: "SQL Query, SELECT only"
+   select_users: "select * from user limit 2"
+   select_android_user: "select * from user  where is_android = false limit 3"
+
+```
+For queries delimitation, only use `"`, not `` ` ``,  since it can be use in the SQL query.
 
 ### Faire des Listes
 
