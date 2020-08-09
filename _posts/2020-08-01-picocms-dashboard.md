@@ -50,10 +50,12 @@ return array(
 		)
  	    );
 ```
-Ici, on a configurer une base de données que l'on utilisera plus loin avec le nom `db1`. On pourait ajouter un autre tableau pour configurer un base de données supplémentaire.
+Ici, on a configuré une base de données que l'on utilisera plus loin avec le nom `db1`. On pourait ajouter un autre tableau pour configurer un base de données supplémentaire.
 
 
 ### Écrire ses requêtes SQL
+
+Viens le temps d'écrire les requête SQL afin de rappatrier les données que l'on va afficher sous forme de listes, de tableau ou sous formes de graphes. Pour cela, vous devez les déclarer dans le fichier de configuration général de *PicoCMS*, `config/config.yml`, en y ajoutant la config suivante :
 
 ```
 mysql_source:
@@ -63,13 +65,65 @@ mysql_source:
    select_android_user: "select * from user  where is_android = false limit 3"
 
 ```
-For queries delimitation, only use `"`, not `` ` ``,  since it can be use in the SQL query.
+
+Utiliser uniquement `"` pour délimiter vos requête, et non pas `` ` ``, qui peut être utiliser dans le SQL. Maintenant que l'on a des requêtes de déclarer, on va voir comment les utiliser dans nos fichiers markdown pour générer du contenu.
+
 
 ### Faire des Listes
 
 
+On utilise directement les requêtes déclarées dans nos fichiers markdown avec la syntaxe suivante :
+
++ `query` : le nom de la requête à utiliser telle qu'elle est déclarée dans le fichier de config de Pico.
++ `row` : le markdown que vous voulez insérer dans votre contenu pour chaque ligne de résultat. Utilise `{` et `}` pour désigner vos nom de colonnes.
+
+Pour une liste : 
+
+```
+[db_source query="select_users" row=" + {id} *email* : {email}" ]
+```
+
+Ou un tableau : 
+
+```
+| id | email |
+|----|:------|
+[db_source query="select_users" row=" | {id} | {email} |" ]
+```
+
 ### Faire des Graphes
 
+On utilise directement les requêtes déclarées dans nos fichiers markdown avec la syntaxe suivante :
+
++ `query` : le nom de la requête à utiliser telle qu'elle est déclarée dans le fichier de config de Pico.
++ `graph` : Choose any of the value in [grap type](https://www.goat1000.com/svggraph.php#graph-types). BarGraph, LineGraph, PieGraph, ...
++ `is_data_column` : boolean 0/1 (default : 1). Set if the data are in row or colum.
++ `is_data_column = "1"` : data are in columns and columns headers are used for x-axis. 
+        
+|is_android|is_iphone|
+|----------|---------|
+|    5     |    2    |
+
++ `is_data_column = "0"` : data are in rows and the first column is used for x-axis.
+	        
+|   Month     |   Sale  |
+|-------------|---------|
+|    January  |    300  |
+|    February |    250  |
+|    March    |    123  |
+|    April    |    29   |
+							    
++ `width` & `height` (optional) : the width and the heigth of your chart (default : 640x480) 
++ `title` : the title of your chart
++ `settings` : you can add any of settings in *JSON style*. See [setting](https://www.goat1000.com/svggraph-settings.php#general-options). `settings="{'back_colour': 'white', 'graph_title': 'Start of Fibonacci series'}"` (use `` ` `` in this JSON settings instead of `"`)
+
+```
+[db_graph  query="count1" width="500" height="400" title="My Graph Title" graph="PieGraph"]
+```
+
+```
+[db_graph  query="sale" title="Sale By Month" graph="LineGraph" is_data_column="0"]
+```
 
 ## Dessiner des graphes à partir de fichier CSV
 
