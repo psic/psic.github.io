@@ -29,12 +29,14 @@ Faire un dashboard, c'est exraire de votre base de données des informations per
 ## Intégrer des données MySQL
 
 On a un flat CMS (sans base de données) d'installé et qui fonctionne, et c'est là que ça devient bizarre, car on va le connecter à une ou plusieurs base de données. Pour en afficher le contenu sous forme de liste ou de graphes. J'ai ecrit deux plugins pour celà, car il est très simple en quelques lignes de php d'écrire un plugin pour *PicoCMS*. [PicoCMS-MySQLList](https://github.com/psic/PicoCMS-MySQLList) pour afficher les données sous forme de liste, et [PicoCMS-MySQLGraph](https://github.com/psic/PicoCMS-MySQLGraph) pour afficher le résultats de vos requêtes SQL sous forme de graphes. 
-t
+
+
 ### Installer & configurer
 
 #### Installation
 
 L'installation consiste simplement à copier les fichiers des repos github ci-dessus dans le repertoire `plugins` de votre installation. Soit vous clonez les repos, soit vous téléchargez les archives que vous décompressez. Ensuite, vous avez deux options. Soit vous placez ces fichiers dans des repertoires respectifs `MySQLGraphPlugin` et `MySQLListPlugin`. Soit vous placez le contenu de ces archives/repertoires directement à la racine du répertoire `plugins`, ce qui vous permettra de partager la configuration des connexions de base de données entre les deux plugins via le fichier `MySQLConfig.php` 
+Une fois copié/déplacé les fichiers à l'endroit voulu, n'oubliez pas de supprimer les archives et les repertoires vides du répertoire `plugins`
 
 #### Configuration des accès BD
 
@@ -96,26 +98,26 @@ Ou un tableau :
 On utilise directement les requêtes déclarées dans nos fichiers markdown avec la syntaxe suivante :
 
 + `query` : le nom de la requête à utiliser telle qu'elle est déclarée dans le fichier de config de Pico.
-+ `graph` : Choose any of the value in [grap type](https://www.goat1000.com/svggraph.php#graph-types). BarGraph, LineGraph, PieGraph, ...
-+ `is_data_column` : boolean 0/1 (default : 1). Set if the data are in row or colum.
-+ `is_data_column = "1"` : data are in columns and columns headers are used for x-axis. 
++ `graph` : détermine le type de graphique voulue. Choisir parmis ces [type de graphe](https://www.goat1000.com/svggraph.php#graph-types). BarGraph, LineGraph, PieGraph, ...
++ `is_data_column` : boolean 0/1 (default : 1). Détermine si les données sont en colonnes ou en ligne.
+	+ `is_data_column = "1"` : Les données sont en colonnes et les entêtes de colonnes sont utilisés pour l'axe des abscisses. 
         
-|is_android|is_iphone|
-|----------|---------|
-|    5     |    2    |
+	|is_android|is_iphone|
+	|----------|---------|
+	|    5     |    2    |
 
-+ `is_data_column = "0"` : data are in rows and the first column is used for x-axis.
+	+ `is_data_column = "0"` : Les données sont en lignes et les données de la première colonne sont utilisées pour l'axde des abscisses.
 	        
-|   Month     |   Sale  |
-|-------------|---------|
-|    January  |    300  |
-|    February |    250  |
-|    March    |    123  |
-|    April    |    29   |
+	|   Month     |   Sale  |
+	|-------------|---------|
+	|    January  |    300  |
+	|    February |    250  |
+	|    March    |    123  |
+	|    April    |    29   |
 							    
-+ `width` & `height` (optional) : the width and the heigth of your chart (default : 640x480) 
-+ `title` : the title of your chart
-+ `settings` : you can add any of settings in *JSON style*. See [setting](https://www.goat1000.com/svggraph-settings.php#general-options). `settings="{'back_colour': 'white', 'graph_title': 'Start of Fibonacci series'}"` (use `` ` `` in this JSON settings instead of `"`)
++ `width` & `height` (optional) : Largeur et hauteur de votre graphe (default : 640x480) 
++ `title` : Titre de votre graphe.
++ `settings` : vous pouvez ajouter des paramètres supplémentaires dans du *presque JSON*. Voir [setting](https://www.goat1000.com/svggraph-settings.php#general-options). `settings="{'back_colour': 'white', 'graph_title': 'Start of Fibonacci series'}"` (utiliser `` ` `` dans ce JSON à la place de `"`)
 
 ```
 [db_graph  query="count1" width="500" height="400" title="My Graph Title" graph="PieGraph"]
@@ -127,6 +129,60 @@ On utilise directement les requêtes déclarées dans nos fichiers markdown avec
 
 ## Dessiner des graphes à partir de fichier CSV
 
+### Installatoin
+
+Copy the `CSVGraphPlugin.php`  into the `plugins` folder.
+
+### Utilisation 
+
+```
+[csv_graph file="/var/www/pico/data/user.csv" file="/var/www/pico/data/userIOS.csv" file="/var/www/pico/data/userAndroid.csv" graph="MultiLineGraph" is_data_column="0"]
+```
+
+
+```
+[csv_graph file="/var/www/pico/data/users.csv"  graph="PieGraph" ]
+```
+
++ `file` : the filename of your csv file. Can add several filenames (for *MultiLineGraph* for instance)
++ `graph` : Choose any of the value in [grap type](https://www.goat1000.com/svggraph.php#graph-types). BarGraph, LineGraph, PieGraph, ...
++ `is_data_column` : boolean 0/1 (default : 1). Set if the data are in row or colum.
+    + `is_data_column = "1"` : data are in columns and columns headers are used for x-axis. 
+        
+    |is_android|is_iphone|
+    |----------|---------|
+    |    5     |    2    |
+
+    + `is_data_column = "0"` : data are in rows and the first column is used for x-axis.
+			        
+    |   Month     |   Sale  |
+    |-------------|---------|
+    |    January  |    300  |
+    |    February |    250  |
+    |    March    |    123  |
+    |    April    |    29   |
+							    
++ `width` & `height` (optional) : the width and the heigth of your chart (default : 640x480) 
++ `title` : the title of your chart
++ `settings` : you can add any of settings in *JSON style*. See [setting](https://www.goat1000.com/svggraph-settings.php#general-options). `settings="{'back_colour': 'white', 'graph_title': 'Start of Fibonacci series'}"` (use `` ` `` in this JSON settings instead of `"`)
+
+### Get data from MySQL DB in bash script
+
+Bash script to make a query to you MySQL database and append the result to the end of a file. Call this script from cron job to get daily values.
+
+
+```
+#!/bin/bash
+BASEDIR=$(dirname $(readlink -f $0))
+MYSQL_DB=db_name
+MYSQL_USER=user
+MYSQL_PWD=pwd
+
+today=`date +\%Y-\%m-\%d`
+
+mysql $MYSQL_DB -u $MYSQL_USER -p$MYSQL_PWD -se "SELECT concat(curdate(),',',count(*)) FROM users \
+                                        WHERE date_signin = curdate();">>$BASEDIR/newuser.csv
+```
 
 ## Envoyer des rapports par mail
 
