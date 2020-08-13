@@ -105,7 +105,7 @@ sources: # bootcdn (default), unpkg
 ## => Sharing
 ##############################
 sharing:
-  provider: false # false (default), "addtoany", "addthis"
+  provider: addtoany # false (default), "addtoany", "addthis"
 
   ## AddThis
   addthis:
@@ -115,7 +115,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: disqus # false (default), "disqus", "gitalk", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "custom"
 
   ## Disqus
   disqus:
@@ -124,11 +124,11 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    clientID    : d28ee62f68d24cad5ef7 # GitHub Application Client ID
+    clientSecret: 15db0c6dafdf2918e48c92326a8c0ecc5d9a4e53 # GitHub Application Client Secret
+    repository  : psic.github.io # GitHub repo
+    owner       : psic # GitHub repo owner
+    admin: psic # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
 
